@@ -10,6 +10,6 @@ Future Kingdoms have tried numerous Plugins which are available through Bukkit, 
 requirments needed by the server nor the players on the Future Kingdoms Minecraft Server.
 
 PINK_____FLOYD
-(System Ademin - Future Kingdoms)
+(System Admin - Future Kingdoms)
 http://www.futurekingdoms.enjin.com/
 
