@@ -1,4 +1,4 @@
-package me.pink_____floyd.FKPlugin;
+package me.FutureKingdoms.FKPlugin;
 
 import java.util.logging.Logger;
 
