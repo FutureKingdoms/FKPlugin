@@ -1,0 +1,65 @@
+package me.pink_____floyd.CommandPlugin;
+
+//import org.bukkit.Statistic;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+
+public class AddPlayerCommand implements CommandExecutor{
+
+	// Create an object to the CustomYML class to access its methods.
+	public CustomYML fileClass = new CustomYML(this);
+	
+	public boolean onCommand(CommandSender sender, org.bukkit.command.Command cmnd, String string, String[] args) 
+    {
+		//int timeStat;
+				//int timeStat = 0;
+				
+				Player player = (Player) sender;
+					
+				//Variable Calculations
+				//timeStat = player.getStatistic(Statistic.PLAY_ONE_TICK)/ 1220;
+			   	
+				
+				// Main Section: for /stats <player> command
+				if (cmnd.getName().equalsIgnoreCase("fkadd")) 
+				{
+					if (args.length == 0) 
+					{
+					//Player only typed '/fk add' so check him only!
+						// Put the list in the file and save the file.
+						fileClass.getCustomConfig().set("PINK_____FLOYD.hours", 3003);
+						//fileClass.getCustomConfig().set("Players.Value", 3);
+						fileClass.saveCustomConfig();
+						player.sendMessage("You have been added to the list!");
+						//player.sendMessage("Names: " + playerNames);
+					
+					
+					}
+					/**else 
+					{
+					//Player typed something more
+					@SuppressWarnings("deprecation")
+					Player target = Bukkit.getPlayerExact(args[0]);
+						if (target == null) 
+						{
+							//Target is not online
+							player.sendMessage("Your target " + args[0] + " is not online!");
+						} 
+						else
+						{
+							//Targets online
+							player.sendMessage("You've healed " + args[0]);
+							target.setHealth(20.0);
+						}
+						return true;
+						**/
+					return false;
+				}
+		return false;
+		
+    }
+	
+	
+	
+}
